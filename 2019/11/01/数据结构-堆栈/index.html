@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">455</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">640</span>Reading time: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -430,10 +430,42 @@ height:50vh;
 <p>插入和删除操作只能在链栈的栈顶进行。栈顶指针Top应该在链表的<strong>头部</strong>。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h4 id="堆栈初始化"><a href="#堆栈初始化" class="headerlink" title="堆栈初始化"></a>堆栈初始化</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreateStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="comment">//构建一个堆栈的头结点，返回指针</span></span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode));</span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="堆栈初始化"><a href="#堆栈初始化" class="headerlink" title="堆栈初始化"></a>堆栈初始化</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreateStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="comment">//构建一个堆栈的头结点，返回指针</span></span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode)); </span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/image-20191104221220540.png" alt="image-20191104221220540" style="zoom:80%;">
 
 <h4 id="判断堆栈是否为空"><a href="#判断堆栈是否为空" class="headerlink" title="判断堆栈是否为空"></a>判断堆栈是否为空</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h4 id="push"><a href="#push" class="headerlink" title="push"></a>push</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span> <span class="params">(ElementType item, Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">TmpCell</span>;</span></span><br><span class="line">    TemCell=(struct SNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Struct SNode));</span><br><span class="line">    TemCell-&gt;Data = item;</span><br><span class="line">    TemCell-&gt;Next = S-&gt;Next;</span><br><span class="line">    S-&gt;Next = TmpCell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">FirstCell</span>;</span></span><br><span class="line">    ElementType TopElem;</span><br><span class="line">    <span class="keyword">if</span>(IsEmpty(S))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"堆栈空"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		FirstCell = S-&gt;Next;</span><br><span class="line">        S-&gt;Next = FirstCell-&gt;Next;</span><br><span class="line">        TopElem = FirstCell-&gt;Element;</span><br><span class="line">        <span class="built_in">free</span>(FirstCell);</span><br><span class="line">        <span class="keyword">return</span> TopElem;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="堆栈应用-表达式求值"><a href="#堆栈应用-表达式求值" class="headerlink" title="堆栈应用 表达式求值"></a>堆栈应用 表达式求值</h2><h4 id="基本策略"><a href="#基本策略" class="headerlink" title="基本策略"></a>基本策略</h4><p>中缀表达式-&gt;后缀表达式</p>
+<ul>
+<li>运算数相对顺序不变，遇到运算数即输出</li>
+<li>运算符号顺序发生改变<ul>
+<li>需要存储“等待中”的运算符</li>
+<li>将当前运算符与“等待中”的运算符比较</li>
+</ul>
+</li>
+</ul>
+<h4 id="中缀-gt-后缀"><a href="#中缀-gt-后缀" class="headerlink" title="中缀-&gt;后缀"></a>中缀-&gt;后缀</h4><img src="/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/image-20191104224149696.png" alt="image-20191104224149696">
+
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><img src="/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/image-20191104224311737.png" alt="image-20191104224311737">
+
+
+
+<h2 id="堆栈其他应用"><a href="#堆栈其他应用" class="headerlink" title="堆栈其他应用"></a>堆栈其他应用</h2><ul>
+<li>函数调用及递归实现</li>
+<li>深度优先搜索</li>
+<li>回溯算法</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -441,6 +473,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/11/04/%E8%AE%B0%E4%B9%8C%E9%95%87%E6%88%8F%E5%89%A7%E8%8A%82/" title= "记乌镇戏剧节">
+                    <div class="nextTitle">记乌镇戏剧节</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -566,7 +603,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆栈的抽象数据类型描述"><span class="toc-number">1.</span> <span class="toc-text">堆栈的抽象数据类型描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的顺序存储实现"><span class="toc-number">2.</span> <span class="toc-text">栈的顺序存储实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要操作实现"><span class="toc-number">2.1.</span> <span class="toc-text">主要操作实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#入栈"><span class="toc-number">2.1.1.</span> <span class="toc-text">入栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#出栈"><span class="toc-number">2.1.2.</span> <span class="toc-text">出栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组实现两个堆栈"><span class="toc-number">2.1.3.</span> <span class="toc-text">数组实现两个堆栈</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#入栈-1"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">入栈</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#出栈-1"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">出栈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈链式存实现"><span class="toc-number">2.2.</span> <span class="toc-text">堆栈链式存实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#堆栈初始化"><span class="toc-number">2.2.1.</span> <span class="toc-text">堆栈初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断堆栈是否为空"><span class="toc-number">2.2.2.</span> <span class="toc-text">判断堆栈是否为空</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆栈的抽象数据类型描述"><span class="toc-number">1.</span> <span class="toc-text">堆栈的抽象数据类型描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的顺序存储实现"><span class="toc-number">2.</span> <span class="toc-text">栈的顺序存储实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要操作实现"><span class="toc-number">2.1.</span> <span class="toc-text">主要操作实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#入栈"><span class="toc-number">2.1.1.</span> <span class="toc-text">入栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#出栈"><span class="toc-number">2.1.2.</span> <span class="toc-text">出栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组实现两个堆栈"><span class="toc-number">2.1.3.</span> <span class="toc-text">数组实现两个堆栈</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#入栈-1"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">入栈</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#出栈-1"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">出栈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆栈链式存实现"><span class="toc-number">2.2.</span> <span class="toc-text">堆栈链式存实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#堆栈初始化"><span class="toc-number">2.2.1.</span> <span class="toc-text">堆栈初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#判断堆栈是否为空"><span class="toc-number">2.2.2.</span> <span class="toc-text">判断堆栈是否为空</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#push"><span class="toc-number">2.2.3.</span> <span class="toc-text">push</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pop"><span class="toc-number">2.2.4.</span> <span class="toc-text">pop</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#堆栈应用-表达式求值"><span class="toc-number">3.</span> <span class="toc-text">堆栈应用 表达式求值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本策略"><span class="toc-number">3.0.1.</span> <span class="toc-text">基本策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中缀-gt-后缀"><span class="toc-number">3.0.2.</span> <span class="toc-text">中缀-&gt;后缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">3.0.3.</span> <span class="toc-text">例子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#堆栈其他应用"><span class="toc-number">4.</span> <span class="toc-text">堆栈其他应用</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -624,9 +661,33 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 7
         </div>
         <!-- search  -->
         
@@ -642,12 +703,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/19-11-01-%E6%9D%82%E8%AE%B0/" >19-11-01 杂记</a>
+            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" >线性结构-队列</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E8%AE%B0%E4%B9%8C%E9%95%87%E6%88%8F%E5%89%A7%E8%8A%82/" >记乌镇戏剧节</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/" >数据结构-堆栈</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/19-11-01-%E6%9D%82%E8%AE%B0/" >19-11-01 杂记</a>
         </li>
     
     
@@ -670,9 +741,9 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
-    
         <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
+    
+        <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
         <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
     
@@ -709,9 +780,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="个人"><span class="iconfont-archer">&#xe60a;</span>个人</span>
-    
         <span class="sidebar-category-name" data-categories="数据结构"><span class="iconfont-archer">&#xe60a;</span>数据结构</span>
+    
+        <span class="sidebar-category-name" data-categories="个人"><span class="iconfont-archer">&#xe60a;</span>个人</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
