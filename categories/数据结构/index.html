@@ -346,6 +346,126 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE/" >
+            
+                <span>数据结构-图</span>
+        </a>
+        <div class="abstract-content">
+            图
+在程序里表示图邻接矩阵 G[N] [N]， N个顶点从0到N-1编号
+
+
+对于无向图的存储，怎么样可以省一半空间
+​    
+对于网络，只要把G[i] [j] 的值定义为边&lt;Vi, Vj&gt;的权重即可。
+
+
+
+优点
+直观简单
+方便检查任意一对顶点间是否存在边
+方便找任一顶点的所有“邻接点”
+方便计算任一顶点的“度”（从该点发出的边数为“出度”，指向该点的边数“出度”）
+无向图：对应行（或列）非0元素的个数
+有向图：对应行非0元素的个数是“出度”；对应列非0元素的个数是“入度”
+
+
+
+
+缺点
+浪费空间（稀疏图）
+浪费时间（稀疏图）
+
+
+
+邻接表G[N]为指针数组， 对应矩阵每...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/26</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" >
+            
+                <span>数据结构-哈夫曼树</span>
+        </a>
+        <div class="abstract-content">
+            哈夫曼树
+
+定义
+e.g.
+
+构造每次选权值最小的两棵树合并
+123456789101112131415161718192021typedef struct TreeNode *HuffmanTree;struct TreeNode&#123;    int Weight;    HuffmanTree Left, Right;&#125;HuffmanTree Huffman (MinHeap H)&#123;    //    int i, HuffmanTree T;    BuildMinHeap(H);    for(i=1; i&lt;H-&gt;Size; i++)&#12...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/" >
+            
+                <span>数据结构-树</span>
+        </a>
+        <div class="abstract-content">
+            背景查找（Searching）
+
+
+
+静态查找顺序查找123456789101112131415161718192021222324typedef struct LNode *List;struct LNode&#123;    ElementType Element[max];    int Length;&#125;//哨兵技巧int SquentialSearch (List Tb1, ElementType K)&#123;    int i;    Tb1-&gt;Element[0] = K;	//建立哨兵    for(i=Tb1-&gt;Length; Tb1-&gt;E...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/11/04/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" >
             
                 <span>线性结构-队列</span>
@@ -357,12 +477,56 @@
 
 
 
-队列的顺序存储实现
+结构12345678#define maxsizestruct QNode&#123;    ElementType Data[maxsize];    int front;    int rear;    int maxsize; //&#125;typedef struct QNode *Queue;
+
+初始化12345678Queue CreatQueue(int maxsize)&#123;    Queue Q = (Queue)malloc(sizeof(struct QNode));    Q-&gt;Data = (ElementType *)malloc...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "线性结构">线性结构</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86/" >
+            
+                <span>数据结构-堆栈</span>
+        </a>
+        <div class="abstract-content">
+            堆
+优先队列: 特殊的“队列”， 取出元素的顺序是依照元素的优先权（关键字）大小。
+
+堆的两个特性
+
+结构性：用数组表示的完全二叉树。
+有序性：任一结点的关键字是其子树所有结点的最大值（或最小值）
+“最大堆（MaxHeap）”， “大顶堆”
+“最小堆（MinHeap）”，“小顶堆”
+
+
+
+堆的抽象数据类型描述
+123456typedef struct HeapStruct *MaxHeap;struct HeapStruct &#123;    ElementType *Elements; // 存储元素的数组    int Size;			//当前元素个数    int Capacit...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/02</span>
             </div>
             <!-- tags  -->
             
@@ -638,9 +802,103 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 7
+        Total : 15
         </div>
         <!-- search  -->
         
@@ -656,6 +914,41 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2019/11/27/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" >排序算法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2019/11/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE/" >数据结构-图</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2019/11/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" >数据结构-哈夫曼树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2019/11/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%83%E4%B9%A0-%E4%B8%80%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E5%8A%A0%E6%B3%95%E4%B8%8E%E4%B9%98%E6%B3%95/" >数据结构练习 一元多项式的加法与乘法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2019/11/21/PAT-B-1033-%E6%97%A7%E9%94%AE%E7%9B%98%E6%89%93%E5%AD%97/" >PAT-B 1033 旧键盘打字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/" >数据结构-树</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span><a class="archive-post-title" href= "/2019/11/08/PAT-B-1019%E6%95%B0%E5%AD%97%E9%BB%91%E6%B4%9E/" >PAT-B 1019数字黑洞</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" >线性结构-队列</a>
         </li>
     
@@ -666,12 +959,17 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/" >数据结构-堆栈</a>
+            <span class="archive-post-date">11/02</span><a class="archive-post-title" href= "/2019/11/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86/" >数据结构-堆栈</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/19-11-01-%E6%9D%82%E8%AE%B0/" >19-11-01 杂记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2019/11/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86%E6%A0%88/" >数据结构-堆栈</a>
         </li>
     
     
@@ -694,11 +992,17 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
+        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
     
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
-        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
+        <span class="sidebar-tag-name" data-tags="PAT"><span class="iconfont-archer">&#xe606;</span>PAT</span>
+    
+        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
+    
+        <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
+    
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -733,9 +1037,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="数据结构"><span class="iconfont-archer">&#xe60a;</span>数据结构</span>
-    
         <span class="sidebar-category-name" data-categories="个人"><span class="iconfont-archer">&#xe60a;</span>个人</span>
+    
+        <span class="sidebar-category-name" data-categories="数据结构"><span class="iconfont-archer">&#xe60a;</span>数据结构</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

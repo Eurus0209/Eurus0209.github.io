@@ -346,25 +346,64 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/11/01/19-11-01-%E6%9D%82%E8%AE%B0/" >
+        <a class="abstract-title" href = "/2019/11/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" >
             
-                <span>19-11-01 杂记</span>
+                <span>数据结构-哈夫曼树</span>
         </a>
         <div class="abstract-content">
-            昨儿晚上睡觉前，室友突然发现，已经11月了，再过一个月，2019年就结束了。害，明年就都20岁了，一点都不像20岁的样子，离自己理想的自己差的还可远了呢。
-最近把博客搞了出来，说实话技术含量不大，想往后学学能把每一个文件夹里的东西都给搞懂，再做些自己的东西吧。
+            哈夫曼树
 
+定义
+e.g.
+
+构造每次选权值最小的两棵树合并
+123456789101112131415161718192021typedef struct TreeNode *HuffmanTree;struct TreeNode&#123;    int Weight;    HuffmanTree Left, Right;&#125;HuffmanTree Huffman (MinHeap H)&#123;    //    int i, HuffmanTree T;    BuildMinHeap(H);    for(i=1; i&lt;H-&gt;Size; i++)&#12...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/01</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/25</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "随笔">随笔</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/" >
+            
+                <span>数据结构-树</span>
+        </a>
+        <div class="abstract-content">
+            背景查找（Searching）
+
+
+
+静态查找顺序查找123456789101112131415161718192021222324typedef struct LNode *List;struct LNode&#123;    ElementType Element[max];    int Length;&#125;//哨兵技巧int SquentialSearch (List Tb1, ElementType K)&#123;    int i;    Tb1-&gt;Element[0] = K;	//建立哨兵    for(i=Tb1-&gt;Length; Tb1-&gt;E...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
     
 </div>
             
