@@ -266,9 +266,9 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "树">树</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "数据结构">数据结构</a>
     
 </div>
                 
@@ -403,42 +403,42 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h2 id="查找（Searching）"><a href="#查找（Searching）" class="headerlink" title="查找（Searching）"></a>查找（Searching）</h2><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117141747453.png" alt="image-20191117141747453" style="zoom:80%;">
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h2 id="查找（Searching）"><a href="#查找（Searching）" class="headerlink" title="查找（Searching）"></a>查找（Searching）</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117141747453.png" alt="image-20191117141747453" style="zoom:80%;" />
 
 
 
 <h2 id="静态查找"><a href="#静态查找" class="headerlink" title="静态查找"></a>静态查找</h2><h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">    ElementType Element[max];</span><br><span class="line">    <span class="keyword">int</span> Length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//哨兵技巧</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SquentialSearch</span> <span class="params">(List Tb1, ElementType K)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    Tb1-&gt;Element[<span class="number">0</span>] = K;	<span class="comment">//建立哨兵</span></span><br><span class="line">    <span class="keyword">for</span>(i=Tb1-&gt;Length; Tb1-&gt;Element[i]!=K; i--);</span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">    <span class="comment">//建立哨兵可在循环时减少一个判断的分支</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//无哨兵：</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SequentialSearch</span> <span class="params">(List Tb1, ElementType K)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//在Element[1]~Element[n]中查找关键字为K的元素</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=Tb1-&gt;length; i&gt;<span class="number">0</span> &amp;&amp; Tbl -&gt; Element[i]!=K; i--);</span><br><span class="line">    <span class="keyword">return</span> i; <span class="comment">//查找成功返回下标，不成功返回0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>时间复杂度： O(n)</p>
-<h3 id="二分查找-Binart-Search"><a href="#二分查找-Binart-Search" class="headerlink" title="二分查找(Binart Search)"></a>二分查找(Binart Search)</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117144041994.png" alt="image-20191117144041994" style="zoom:80%;">
+<h3 id="二分查找-Binart-Search"><a href="#二分查找-Binart-Search" class="headerlink" title="二分查找(Binart Search)"></a>二分查找(Binart Search)</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117144041994.png" alt="image-20191117144041994" style="zoom:80%;" />
 
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span> <span class="params">(List Tbl, ElementType K)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left, right, mid, NoFound= <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    left =<span class="number">1</span>;				<span class="comment">//左边界</span></span><br><span class="line">    right = Tbl -&gt;length;	<span class="comment">//右边界</span></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right)</span><br><span class="line">    &#123;</span><br><span class="line">        mid = (left+right)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(K &lt; Tbl-&gt;Element[mid])</span><br><span class="line">            right = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(K &gt; Tbl-&gt;Element[mid])</span><br><span class="line">            left = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NotFound;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117145124531.png" alt="image-20191117145124531">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117145124531.png" alt="image-20191117145124531"  />
 
-<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="树的定义"><a href="#树的定义" class="headerlink" title="树的定义"></a>树的定义</h2><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117150244847.png" alt="image-20191117150244847" style="zoom:150%;">
+<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="树的定义"><a href="#树的定义" class="headerlink" title="树的定义"></a>树的定义</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117150244847.png" alt="image-20191117150244847" style="zoom:150%;" />
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117150421011.png" alt="image-20191117150421011" style="zoom: 150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117150421011.png" alt="image-20191117150421011" style="zoom: 150%;" />
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117150515741.png" alt="image-20191117150515741" style="zoom:150%;">
-
-
-
-<h2 id="树的表示"><a href="#树的表示" class="headerlink" title="树的表示"></a>树的表示</h2><h3 id="儿子兄弟表示法"><a href="#儿子兄弟表示法" class="headerlink" title="儿子兄弟表示法"></a>儿子兄弟表示法</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117150955860.png" alt="image-20191117150955860" style="zoom:150%;">
-
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117151204170.png" alt="image-20191117151204170" style="zoom:150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117150515741.png" alt="image-20191117150515741" style="zoom:150%;" />
 
 
 
-<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117193759400.png" alt="image-20191117193759400">
+<h2 id="树的表示"><a href="#树的表示" class="headerlink" title="树的表示"></a>树的表示</h2><h3 id="儿子兄弟表示法"><a href="#儿子兄弟表示法" class="headerlink" title="儿子兄弟表示法"></a>儿子兄弟表示法</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117150955860.png" alt="image-20191117150955860" style="zoom:150%;" />
 
-<h3 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117200039034.png" alt="image-20191117200039034" style="zoom: 150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117151204170.png" alt="image-20191117151204170" style="zoom:150%;" />
 
-<h3 id="二叉树重要性质"><a href="#二叉树重要性质" class="headerlink" title="二叉树重要性质"></a>二叉树重要性质</h3><h3 id="二叉树的抽象数据类型定义"><a href="#二叉树的抽象数据类型定义" class="headerlink" title="二叉树的抽象数据类型定义"></a>二叉树的抽象数据类型定义</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117201355895.png" alt="image-20191117201355895" style="zoom:150%;">
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117201444269.png" alt="image-20191117201444269" style="zoom:150%;">
+
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117193759400.png" alt="image-20191117193759400"  />
+
+<h3 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117200039034.png" alt="image-20191117200039034" style="zoom: 150%;" />
+
+<h3 id="二叉树重要性质"><a href="#二叉树重要性质" class="headerlink" title="二叉树重要性质"></a>二叉树重要性质</h3><h3 id="二叉树的抽象数据类型定义"><a href="#二叉树的抽象数据类型定义" class="headerlink" title="二叉树的抽象数据类型定义"></a>二叉树的抽象数据类型定义</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117201355895.png" alt="image-20191117201355895" style="zoom:150%;" />
+
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117201444269.png" alt="image-20191117201444269" style="zoom:150%;" />
 
 
 
@@ -450,11 +450,11 @@ height:50vh;
 </ul>
 </li>
 </ul>
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117201644872.png" alt="image-20191117201644872" style="zoom:150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117201644872.png" alt="image-20191117201644872" style="zoom:150%;" />
 
 <ul>
 <li><p>一般二叉树： 也可以，但会空间浪费</p>
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117202104545.png" alt="image-20191117202104545" style="zoom:150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117202104545.png" alt="image-20191117202104545" style="zoom:150%;" />
 
 </li>
 </ul>
@@ -467,7 +467,7 @@ height:50vh;
 <li>先序遍历其左子树</li>
 <li>先序遍历其右子树</li>
 </ul>
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cworkforhexo%5Csource_posts%5Cimage%5Cimage-20191117203006690.png" alt="image-20191117203006690"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117203006690.png" alt="image-20191117203006690"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraversal</span> <span class="params">(BinTree BT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(BT)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,BT-&gt;Data);</span><br><span class="line">        PreOrderTraversal(BT-&gt;Left);</span><br><span class="line">        PreOrderTraversal(BT-&gt;Right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">A B D F E C G H I</span><br></pre></td></tr></table></figure>
 
 
@@ -479,7 +479,7 @@ height:50vh;
 <li>访问根节点</li>
 <li>中序遍历其右子树</li>
 </ul>
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117204001626-1573994412719.png" alt="image-20191117204001626">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117204001626-1573994412719.png" alt="image-20191117204001626"  />
 
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span> <span class="params">(BinTree BT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(BT) &#123;</span><br><span class="line">        InOrderTraversal(BT-&gt;Left);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,BT-&gt;Data);</span><br><span class="line">        InOrderTraversal(BT-&gt;Right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">D B E F A G H C I</span><br></pre></td></tr></table></figure>
 
@@ -493,13 +493,13 @@ height:50vh;
 <li><p>访问根节点</p>
 </li>
 </ul>
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117204223237.png" alt="image-20191117204223237">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117204223237.png" alt="image-20191117204223237"  />
 
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrderTraversal</span> <span class="params">(BinTree BT)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(BT) &#123;</span><br><span class="line">        PostOrderTraversal(BT-&gt;Left);</span><br><span class="line">        PostOrderTraversal(BT-&gt;Right);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,BT-&gt;Data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">D E F B H G I C A</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="二叉树的非递归遍历"><a href="#二叉树的非递归遍历" class="headerlink" title="二叉树的非递归遍历"></a>二叉树的非递归遍历</h3><h4 id="中序遍历非递归算法"><a href="#中序遍历非递归算法" class="headerlink" title="中序遍历非递归算法"></a>中序遍历非递归算法</h4><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191117204537473.png" alt="image-20191117204537473">
+<h3 id="二叉树的非递归遍历"><a href="#二叉树的非递归遍历" class="headerlink" title="二叉树的非递归遍历"></a>二叉树的非递归遍历</h3><h4 id="中序遍历非递归算法"><a href="#中序遍历非递归算法" class="headerlink" title="中序遍历非递归算法"></a>中序遍历非递归算法</h4><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191117204537473.png" alt="image-20191117204537473"  />
 
 <ul>
 <li>遇到一个结点，把它压栈，并遍历它的左子树</li>
@@ -518,7 +518,7 @@ height:50vh;
 
 
 
-<h3 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118212444685.png" alt="image-20191118212444685" style="zoom:150%;">
+<h3 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118212444685.png" alt="image-20191118212444685" style="zoom:150%;" />
 
 <ul>
 <li>队列实现：遍历从跟结点开始，首先将跟结点入列，然后开始执行循环：结点出队，访问该结点，其左右儿子入列。</li>
@@ -529,7 +529,7 @@ height:50vh;
 
 
 
-<h2 id="二叉树遍历应用"><a href="#二叉树遍历应用" class="headerlink" title="二叉树遍历应用"></a>二叉树遍历应用</h2><h3 id="求二叉树高度"><a href="#求二叉树高度" class="headerlink" title="求二叉树高度"></a>求二叉树高度</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118213909291.png" alt="image-20191118213909291" style="zoom:150%;">
+<h2 id="二叉树遍历应用"><a href="#二叉树遍历应用" class="headerlink" title="二叉树遍历应用"></a>二叉树遍历应用</h2><h3 id="求二叉树高度"><a href="#求二叉树高度" class="headerlink" title="求二叉树高度"></a>求二叉树高度</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118213909291.png" alt="image-20191118213909291" style="zoom:150%;" />
 
 
 
@@ -537,23 +537,23 @@ height:50vh;
 
 
 
-<h3 id="二元运算表达树及其遍历"><a href="#二元运算表达树及其遍历" class="headerlink" title="二元运算表达树及其遍历"></a>二元运算表达树及其遍历</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118214852281.png" alt="image-20191118214852281">
+<h3 id="二元运算表达树及其遍历"><a href="#二元运算表达树及其遍历" class="headerlink" title="二元运算表达树及其遍历"></a>二元运算表达树及其遍历</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118214852281.png" alt="image-20191118214852281"  />
 
 
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118215104548.png" alt="image-20191118215104548">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118215104548.png" alt="image-20191118215104548"  />
 
 
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118215340668.png" alt="image-20191118215340668" style="zoom:80%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118215340668.png" alt="image-20191118215340668" style="zoom:80%;" />
 
-<h3 id="先序和中序遍历来确定一棵二叉树"><a href="#先序和中序遍历来确定一棵二叉树" class="headerlink" title="先序和中序遍历来确定一棵二叉树"></a>先序和中序遍历来确定一棵二叉树</h3><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191118215602651.png" alt="image-20191118215602651" style="zoom:120%;">
+<h3 id="先序和中序遍历来确定一棵二叉树"><a href="#先序和中序遍历来确定一棵二叉树" class="headerlink" title="先序和中序遍历来确定一棵二叉树"></a>先序和中序遍历来确定一棵二叉树</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191118215602651.png" alt="image-20191118215602651" style="zoom:120%;" />
 
-<h1 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h1><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191119211733864.png" alt="image-20191119211733864" style="zoom:150%;">
+<h1 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h1><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191119211733864.png" alt="image-20191119211733864" style="zoom:150%;" />
 
 
 
-<img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/image-20191119211921327.png" alt="image-20191119211921327" style="zoom: 150%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191119211921327.png" alt="image-20191119211921327" style="zoom: 150%;" />
 
 <h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(ElementType X, BinTree BST)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!BST)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(X&gt; BST-&gt;Data)</span><br><span class="line">        <span class="keyword">return</span> Find(X,BST-&gt;Right);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(X &lt; BST-&gt;Data)</span><br><span class="line">        <span class="keyword">return</span> Find(X,BST-&gt;Left);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> BST;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -578,34 +578,34 @@ height:50vh;
 
 
 
-<h1 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h1><p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122232613247.png" alt="image-20191122232613247"></p>
+<h1 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h1><p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122232613247.png" alt="image-20191122232613247"></p>
 <h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><ul>
 <li>“平衡因子，BF”：BF(T) = h<del>L</del> - h<del>R</del></li>
-<li><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122233334183.png" alt="image-20191122233334183"></li>
+<li><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122233334183.png" alt="image-20191122233334183"></li>
 </ul>
 <ul>
 <li><p>高度</p>
 <p>设 n<del>h</del> 为高度为h的平衡二叉树的最少结点</p>
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122233719077.png" alt="image-20191122233719077"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122233719077.png" alt="image-20191122233719077"></p>
 <p>（斐波那契数列相似）</p>
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122234008060.png" alt="image-20191122234008060"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122234008060.png" alt="image-20191122234008060"></p>
 </li>
 </ul>
 <h2 id="平衡二叉树的调整"><a href="#平衡二叉树的调整" class="headerlink" title="平衡二叉树的调整"></a>平衡二叉树的调整</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//AVL树的旋转与插入</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">AVLNode</span> * <span class="title">AVLTree</span>;</span> <span class="comment">/* AVL树类型 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AVLNode</span>&#123;</span></span><br><span class="line">    ElementType Data; <span class="comment">/* 结点数据 */</span></span><br><span class="line">    AVLTree Left;     <span class="comment">/* 指向左子树 */</span></span><br><span class="line">    AVLTree Right;    <span class="comment">/* 指向右子树 */</span></span><br><span class="line">    <span class="keyword">int</span> Height;       <span class="comment">/* 树高 */</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Max</span> <span class="params">( <span class="keyword">int</span> a, <span class="keyword">int</span> b )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122234512224.png" alt="image-20191122234512224"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122234512224.png" alt="image-20191122234512224"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">SingleRightRotation</span><span class="params">(AVLTree A)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ALVTree B = A-&gt;Right;</span><br><span class="line">    A-&gt;Right = B-&gt;Left;</span><br><span class="line">    B-&gt;Left = A;</span><br><span class="line">    A-&gt;Height = Max(GetHeight(A-&gt;Left),GetHeight(A-&gt;Right))+<span class="number">1</span>;</span><br><span class="line">    B-&gt;Height = Max(GetHeight(B-&gt;Left),A-&gt;Height)+<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> B;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122234528865.png" alt="image-20191122234528865"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122234528865.png" alt="image-20191122234528865"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">SingleLeftRotation</span><span class="params">(AVLTree A)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    AVLTree B = A-&gt;Left;</span><br><span class="line">    A-&gt;Left = B-&gt;Right;</span><br><span class="line">    B-&gt;Right = A;</span><br><span class="line">    A-&gt;Height = Max(GetHeight(A-&gt;Left),GetHeight(A-&gt;Right))+<span class="number">1</span>;</span><br><span class="line">    B-&gt;Height = Max(GetHeight(B-&gt;Left),A-&gt;Height)+<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> B;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122234540983.png" alt="image-20191122234540983"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122234540983.png" alt="image-20191122234540983"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">AVLTree <span class="title">DoubleLeftRightRotation</span> <span class="params">( AVLTree A )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    A-&gt;Left=SingleRightRotation(A-&gt;Left);</span><br><span class="line">    <span class="keyword">return</span> SingleLeftRotation(A);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -614,7 +614,7 @@ height:50vh;
 
 
 
-<p><img src="/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/D:%5Cimage_0%5Cimage-20191122234549191.png" alt="image-20191122234549191"></p>
+<p><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191122234549191.png" alt="image-20191122234549191"></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -898,41 +898,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 13
         </div>
         <!-- search  -->
         
@@ -942,6 +910,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2020/11/01/%E6%97%A5%E8%AE%B02020-11-01/" >日记2020-11-01</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
@@ -953,17 +935,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2019/11/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE/" >数据结构-图</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2019/11/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" >数据结构-哈夫曼树</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2019/11/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%83%E4%B9%A0-%E4%B8%80%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E5%8A%A0%E6%B3%95%E4%B8%8E%E4%B9%98%E6%B3%95/" >数据结构练习 一元多项式的加法与乘法</a>
         </li>
     
     
@@ -984,11 +956,6 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" >线性结构-队列</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E8%AE%B0%E4%B9%8C%E9%95%87%E6%88%8F%E5%89%A7%E8%8A%82/" >记乌镇戏剧节</a>
         </li>
     
     
@@ -1026,17 +993,17 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
-    
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
-        <span class="sidebar-tag-name" data-tags="PAT"><span class="iconfont-archer">&#xe606;</span>PAT</span>
+        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
+    
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
     
-        <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
+        <span class="sidebar-tag-name" data-tags="PAT"><span class="iconfont-archer">&#xe606;</span>PAT</span>
     
-        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+        <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1074,6 +1041,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="个人"><span class="iconfont-archer">&#xe60a;</span>个人</span>
     
         <span class="sidebar-category-name" data-categories="数据结构"><span class="iconfont-archer">&#xe60a;</span>数据结构</span>
+    
+        <span class="sidebar-category-name" data-categories="日记"><span class="iconfont-archer">&#xe60a;</span>日记</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

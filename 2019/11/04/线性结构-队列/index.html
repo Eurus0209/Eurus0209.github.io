@@ -401,11 +401,11 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230100090.png" alt="image-20191104230100090" style="zoom:80%;">
+        <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230100090.png" alt="image-20191104230100090" style="zoom:80%;" />
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230140668.png" alt="image-20191104230140668">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230140668.png" alt="image-20191104230140668"  />
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230209047.png" alt="image-20191104230209047" style="zoom:80%;">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230209047.png" alt="image-20191104230209047" style="zoom:80%;" />
 
 <h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxsize</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span></span><br><span class="line">    ElementType Data[maxsize];</span><br><span class="line">    <span class="keyword">int</span> front;</span><br><span class="line">    <span class="keyword">int</span> rear;</span><br><span class="line">    <span class="keyword">int</span> maxsize; <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br></pre></td></tr></table></figure>
 
@@ -414,7 +414,7 @@ height:50vh;
 
 
 <h2 id="队列的顺序存储实现"><a href="#队列的顺序存储实现" class="headerlink" title="队列的顺序存储实现"></a>队列的顺序存储实现</h2><p>队列的顺序存储结构通常由一个<strong>一维数组</strong>和一个记录队列头元素位置的变量<strong>front</strong>以及一个记录队列尾元素位置的变量<strong>rear</strong>组成。（rear和front初始都是-1）</p>
-<h3 id="顺环队列"><a href="#顺环队列" class="headerlink" title="顺环队列"></a>顺环队列</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105125829220.png" alt="image-20191105125829220" style="zoom: 67%;">
+<h3 id="顺环队列"><a href="#顺环队列" class="headerlink" title="顺环队列"></a>顺环队列</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105125829220.png" alt="image-20191105125829220" style="zoom: 67%;" />
 
 <p>问题：无法判断队列的空和满，空和满时</p>
 <p>解决方案：</p>
@@ -432,7 +432,7 @@ height:50vh;
 
 <h3 id="队列的链式存储结构"><a href="#队列的链式存储结构" class="headerlink" title="队列的链式存储结构"></a>队列的链式存储结构</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">rear</span>;</span>  <span class="comment">//指向队尾结点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">front</span>;</span> <span class="comment">//指向队头结点</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br><span class="line">Queue PtrQ;</span><br></pre></td></tr></table></figure>
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105133213769.png" alt="image-20191105133213769">
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105133213769.png" alt="image-20191105133213769"  />
 
 
 
@@ -457,8 +457,8 @@ height:50vh;
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/11/04/%E8%AE%B0%E4%B9%8C%E9%95%87%E6%88%8F%E5%89%A7%E8%8A%82/" title= "记乌镇戏剧节">
-                    <div class="prevTitle">记乌镇戏剧节</div>
+                <a href= "/2019/11/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%A0%86/" title= "数据结构-堆栈">
+                    <div class="prevTitle">数据结构-堆栈</div>
                 </a>
             
         </li>
@@ -721,41 +721,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 13
         </div>
         <!-- search  -->
         
@@ -765,6 +733,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span><a class="archive-post-title" href= "/2020/11/01/%E6%97%A5%E8%AE%B02020-11-01/" >日记2020-11-01</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
@@ -776,17 +758,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/26</span><a class="archive-post-title" href= "/2019/11/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE/" >数据结构-图</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/25</span><a class="archive-post-title" href= "/2019/11/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" >数据结构-哈夫曼树</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/21</span><a class="archive-post-title" href= "/2019/11/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%83%E4%B9%A0-%E4%B8%80%E5%85%83%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E5%8A%A0%E6%B3%95%E4%B8%8E%E4%B9%98%E6%B3%95/" >数据结构练习 一元多项式的加法与乘法</a>
         </li>
     
     
@@ -807,11 +779,6 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97/" >线性结构-队列</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2019/11/04/%E8%AE%B0%E4%B9%8C%E9%95%87%E6%88%8F%E5%89%A7%E8%8A%82/" >记乌镇戏剧节</a>
         </li>
     
     
@@ -849,17 +816,17 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
-    
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
-        <span class="sidebar-tag-name" data-tags="PAT"><span class="iconfont-archer">&#xe606;</span>PAT</span>
+        <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
+    
+        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
     
         <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
     
-        <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
+        <span class="sidebar-tag-name" data-tags="PAT"><span class="iconfont-archer">&#xe606;</span>PAT</span>
     
-        <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+        <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -897,6 +864,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="个人"><span class="iconfont-archer">&#xe60a;</span>个人</span>
     
         <span class="sidebar-category-name" data-categories="数据结构"><span class="iconfont-archer">&#xe60a;</span>数据结构</span>
+    
+        <span class="sidebar-category-name" data-categories="日记"><span class="iconfont-archer">&#xe60a;</span>日记</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
