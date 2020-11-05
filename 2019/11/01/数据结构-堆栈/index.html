@@ -12,6 +12,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <meta name="author" content="会飞">
     <meta name="renderer" content="webkit">
@@ -401,9 +402,9 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="堆栈的抽象数据类型描述"><a href="#堆栈的抽象数据类型描述" class="headerlink" title="堆栈的抽象数据类型描述"></a>堆栈的抽象数据类型描述</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191101143848056.png" alt="image-20191101143848056" style="zoom:80%;" />
+        <h2 id="堆栈的抽象数据类型描述"><a href="#堆栈的抽象数据类型描述" class="headerlink" title="堆栈的抽象数据类型描述"></a>堆栈的抽象数据类型描述</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191101143848056.png" alt="image-20191101143848056" style="zoom:80%;">
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191101144043946.png" alt="image-20191101144043946" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191101144043946.png" alt="image-20191101144043946" style="zoom:80%;">
 
 
 
@@ -432,7 +433,7 @@ height:50vh;
 
 <h4 id="堆栈初始化"><a href="#堆栈初始化" class="headerlink" title="堆栈初始化"></a>堆栈初始化</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreateStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="comment">//构建一个堆栈的头结点，返回指针</span></span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode)); </span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104221220540.png" alt="image-20191104221220540" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104221220540.png" alt="image-20191104221220540" style="zoom:80%;">
 
 <h4 id="判断堆栈是否为空"><a href="#判断堆栈是否为空" class="headerlink" title="判断堆栈是否为空"></a>判断堆栈是否为空</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -455,9 +456,9 @@ height:50vh;
 </ul>
 </li>
 </ul>
-<h4 id="中缀-gt-后缀"><a href="#中缀-gt-后缀" class="headerlink" title="中缀-&gt;后缀"></a>中缀-&gt;后缀</h4><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104224149696.png" alt="image-20191104224149696"  />
+<h4 id="中缀-gt-后缀"><a href="#中缀-gt-后缀" class="headerlink" title="中缀-&gt;后缀"></a>中缀-&gt;后缀</h4><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104224149696.png" alt="image-20191104224149696">
 
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104224311737.png" alt="image-20191104224311737"  />
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104224311737.png" alt="image-20191104224311737">
 
 
 
@@ -751,8 +752,6 @@ top:50vh;
     
     
     
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 13
@@ -854,9 +853,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
     
-        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     

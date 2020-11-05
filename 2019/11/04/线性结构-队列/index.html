@@ -12,6 +12,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <meta name="author" content="会飞">
     <meta name="renderer" content="webkit">
@@ -401,11 +402,11 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230100090.png" alt="image-20191104230100090" style="zoom:80%;" />
+        <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230100090.png" alt="image-20191104230100090" style="zoom:80%;">
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230140668.png" alt="image-20191104230140668"  />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230140668.png" alt="image-20191104230140668">
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230209047.png" alt="image-20191104230209047" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191104230209047.png" alt="image-20191104230209047" style="zoom:80%;">
 
 <h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxsize</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span></span><br><span class="line">    ElementType Data[maxsize];</span><br><span class="line">    <span class="keyword">int</span> front;</span><br><span class="line">    <span class="keyword">int</span> rear;</span><br><span class="line">    <span class="keyword">int</span> maxsize; <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br></pre></td></tr></table></figure>
 
@@ -414,7 +415,7 @@ height:50vh;
 
 
 <h2 id="队列的顺序存储实现"><a href="#队列的顺序存储实现" class="headerlink" title="队列的顺序存储实现"></a>队列的顺序存储实现</h2><p>队列的顺序存储结构通常由一个<strong>一维数组</strong>和一个记录队列头元素位置的变量<strong>front</strong>以及一个记录队列尾元素位置的变量<strong>rear</strong>组成。（rear和front初始都是-1）</p>
-<h3 id="顺环队列"><a href="#顺环队列" class="headerlink" title="顺环队列"></a>顺环队列</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105125829220.png" alt="image-20191105125829220" style="zoom: 67%;" />
+<h3 id="顺环队列"><a href="#顺环队列" class="headerlink" title="顺环队列"></a>顺环队列</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105125829220.png" alt="image-20191105125829220" style="zoom: 67%;">
 
 <p>问题：无法判断队列的空和满，空和满时</p>
 <p>解决方案：</p>
@@ -432,7 +433,7 @@ height:50vh;
 
 <h3 id="队列的链式存储结构"><a href="#队列的链式存储结构" class="headerlink" title="队列的链式存储结构"></a>队列的链式存储结构</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">rear</span>;</span>  <span class="comment">//指向队尾结点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">front</span>;</span> <span class="comment">//指向队头结点</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br><span class="line">Queue PtrQ;</span><br></pre></td></tr></table></figure>
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105133213769.png" alt="image-20191105133213769"  />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191105133213769.png" alt="image-20191105133213769">
 
 
 
@@ -725,8 +726,6 @@ top:50vh;
     
     
     
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 13
@@ -828,9 +827,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
     
-        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     

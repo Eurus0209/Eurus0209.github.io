@@ -12,6 +12,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
     <meta name="author" content="会飞">
     <meta name="renderer" content="webkit">
@@ -401,22 +402,22 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031230624011.png" alt="image-20191031230624011" style="zoom:80%;" />
+        <img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031230624011.png" alt="image-20191031230624011" style="zoom:80%;">
 
 <h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GNode</span> *<span class="title">GList</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">GNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> Tag;        <span class="comment">//标志域：0表示结点是单元素，1表示结点是广义表</span></span><br><span class="line">    <span class="keyword">union</span>&#123;          <span class="comment">//子表指针域Sublist与单元素数据域Data复用</span></span><br><span class="line">        ElementType Data;</span><br><span class="line">        GList SubList;</span><br><span class="line">    &#125; URegion;</span><br><span class="line">    GList Next;     <span class="comment">//指向后继结点</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231033836.png" alt="image-20191031231033836" style="zoom: 80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231033836.png" alt="image-20191031231033836" style="zoom: 80%;">
 
 
 
-<h3 id="多重链表"><a href="#多重链表" class="headerlink" title="多重链表"></a>多重链表</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231136463.png" alt="image-20191031231136463" style="zoom:80%;" />
+<h3 id="多重链表"><a href="#多重链表" class="headerlink" title="多重链表"></a>多重链表</h3><img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231136463.png" alt="image-20191031231136463" style="zoom:80%;">
 
 <h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>矩阵可以用二维数组表示，但二维数组表示有两个缺陷</p>
 <ul>
 <li><p>数组大小要事先确认</p>
 </li>
 <li><p>对于“稀疏矩阵”，造成大量的存储空间浪费。</p>
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231350615.png" alt="image-20191031231350615" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231350615.png" alt="image-20191031231350615" style="zoom:80%;">
 
 </li>
 </ul>
@@ -432,14 +433,14 @@ height:50vh;
 </ul>
 </li>
 </ul>
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231909463.png" alt="image-20191031231909463" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031231909463.png" alt="image-20191031231909463" style="zoom:80%;">
 
 <p>*<em>term 4 5 7 *</em>: 路口结点，四行五列七项非零项</p>
 <ul>
 <li><p>用一个标识符Tag来区分头结点和非0元素结点</p>
 </li>
 <li><p>头结点的标识值为”Head”，矩阵非0元素结点的标识值为”Term”.</p>
-<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031232504424.png" alt="image-20191031232504424" style="zoom:80%;" />
+<img src="http://qi4tb9gpw.hn-bkt.clouddn.com/img/image-20191031232504424.png" alt="image-20191031232504424" style="zoom:80%;">
 
 </li>
 </ul>
@@ -728,8 +729,6 @@ top:50vh;
     
     
     
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 13
@@ -831,9 +830,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="PAT-B"><span class="iconfont-archer">&#xe606;</span>PAT-B</span>
     
-        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
-    
         <span class="sidebar-tag-name" data-tags="树"><span class="iconfont-archer">&#xe606;</span>树</span>
+    
+        <span class="sidebar-tag-name" data-tags="线性结构"><span class="iconfont-archer">&#xe606;</span>线性结构</span>
     
         <span class="sidebar-tag-name" data-tags="数据结构"><span class="iconfont-archer">&#xe606;</span>数据结构</span>
     
